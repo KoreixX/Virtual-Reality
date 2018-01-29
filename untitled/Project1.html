@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="js/aframe.min.js"></script>
+
+
+</head>
+<body>
+
+<a-scene>
+    <a-sky color="#FF0000"></a-sky>
+    <a-entity position = "54 1.5 12">
+        <a-camera universal-controls ="movementAcceleration: 400;">
+            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
+                              radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75";>
+            </a-entity>
+        </a-camera>
+a
+        <!-- Ceiling -->
+        <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
+src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
+            <!--Floor-->
+            <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 0 0" material="shader: flat; side: double; opacity: 1;
+                    src: url(images/floor.jpg); repeat: 12 5">
+            </a-entity>
+
+        <a-gltf-model src="img/scene.gltf" position="55 0 -5" scale="3 3 3" ></a-gltf-model>
+
+
+        <!-- Walls  -->
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 50" position="-80 2.5 0" rotation="0 90 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 50" position="80 2.5 0" rotation="0 90 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 160" position="0 2.5 -25" rotation="0 0 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 160" position="0 2.5 25" rotation="0 0 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
+w
+        <!-- internal walls -->
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 25" position="67.8 2.5 -5" rotation="0 0 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
+
+        <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 21" position="50 2.5 -15" rotation="0 90 0" material="shader: standard;
+roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
+
+
+
+    </a-entity>
+</a-scene>
+
+</body>
+</html>
