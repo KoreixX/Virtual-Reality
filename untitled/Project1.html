@@ -14,7 +14,7 @@
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75";>
             </a-entity>
         </a-camera>
-a
+
         <!-- Ceiling -->
         <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
 src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
@@ -23,8 +23,21 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
                     src: url(images/floor.jpg); repeat: 12 5">
             </a-entity>
 
-        <a-gltf-model src="img/scene.gltf" position="55 0 -5" scale="3 3 3" ></a-gltf-model>
+        <!-- Master Bedroom -->
+        <a-gltf-model src="bed/scene.gltf" position="65 0 -20" scale="2 2 2" ></a-gltf-model>
+        <a-gltf-model src="night stand/scene.gltf" position="69 1 -23.5" scale="1 1 1" ></a-gltf-model>
+        <a-gltf-model src="night stand/scene.gltf" position="61 1 -23.5" scale="1 1 1" ></a-gltf-model>dw
+        <a-gltf-model src="carpet/scene.gltf" position="65 -0.8 -13" scale="0.09 0.09 0.09" ></a-gltf-model>
+        <a-gltf-model src="tvstand/scene.gltf" position="66.5 0 -6.3" scale="0.004 0.004 0.004" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="tv/scene.gltf" position="65 1.5 -6.3" scale="0.5 0.5 0.5" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="library/scene.gltf" position="50.7 0 -16.5" scale="0.02 0.02 0.02" rotation="0 90 0"></a-gltf-model>
 
+        <!-- Living Room -->
+        <a-gltf-model src="sofa/scene.gltf" position="62 0 12" scale="0.06 0.06 0.06" rotation="0 90 0"></a-gltf-model>
+        <a-gltf-model src="smallsofa/scene.gltf" position="66.7 0 17.7" scale="2.3 2.3 2.3" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="coffetable/scene.gltf" position="66.7 0.1 13" scale="0.025 0.025 0.025"></a-gltf-model>
+        <a-gltf-model src="tvstand2/scene.gltf" position="75.8 0 19" scale="0.003 0.003 0.003"  rotation="0 90 0"></a-gltf-model>
+        <a-gltf-model src="tv2/scene.gltf" position="78.5d 1.39 10.9" scale="0.12 0.12 0.12"  rotation="0 270 0"></a-gltf-model>
 
         <!-- Walls  -->
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 50" position="-80 2.5 0" rotation="0 90 0" material="shader: standard;
@@ -35,7 +48,7 @@ roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
 roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 160" position="0 2.5 25" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
-w
+
         <!-- internal walls -->
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 25" position="67.8 2.5 -5" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
