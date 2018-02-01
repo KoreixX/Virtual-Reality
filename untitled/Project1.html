@@ -9,7 +9,7 @@
 <a-scene>
     <a-sky color="#FF0000"></a-sky>
     <a-entity position = "54 1.5 12">
-        <a-camera universal-controls wasd-controls="acceleration: 400;">
+        <a-camera universal-controls wasd-controls="acceleration: 400; fly: true;">
             <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75";>
             </a-entity>
@@ -25,7 +25,7 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
 
         <!-- Master Bedroom -->
         <a-gltf-model src="bed/scene.gltf" position="65 0 -20" scale="2 2 2" ></a-gltf-model>
-        <a-gltf-model src="night stand/scene.gltf" position="69 1 -23.5" scale="1 1 1" ></a-gltf-model>
+        <a-gltf-model src="night stand/scene.gltf" position="69 1 -23.5" scale="1 1 1" animation="property: rotation; loop:true; to: 0 360 0;"></a-gltf-model>
         <a-gltf-model src="night stand/scene.gltf" position="61 1 -23.5" scale="1 1 1" ></a-gltf-model>dw
         <a-gltf-model src="carpet/scene.gltf" position="65 -0.8 -13" scale="0.09 0.09 0.09" ></a-gltf-model>
         <a-gltf-model src="tvstand/scene.gltf" position="66.5 0 -6.3" scale="0.004 0.004 0.004" rotation="0 180 0"></a-gltf-model>
@@ -42,6 +42,10 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
         <!-- Kitchen -->
         <a-gltf-model src="kitchen/scene.gltf" position="-10 0 0" scale="1 1 1" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="table/scene.gltf" position="55 0 13" scale="2 2 2" ></a-gltf-model>
+
+        <!-- Playroom -->
+        <a-gltf-model src="pooltable/scene.gltf" position="46 0 -14" scale="0.02 0.02 0.02" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="tabletennis/scene.gltf" position="47 0 -14" scale="1 1 1" rotation="0 180 0"></a-gltf-model>
 
         <!-- Office -->
         <a-gltf-model src="compdesk/scene.gltf" position="75.5 0.23 -20" scale="0.057 0.057 0.057" rotation="0 270 0"></a-gltf-model>
