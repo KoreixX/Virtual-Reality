@@ -15,15 +15,67 @@
             </a-entity>
         </a-camera>
 
-        <!-- Ceiling -->
-        <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
+        <!-- Ground -->
+        <a-grid static-body></a-grid>
+
+        <!-- Obstacles -->
+        <a-box color="#39BB82"
+               width="25" height="5" depth="0.5"
+               position="14.180 2.500 -11.558"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="25" height="5" depth="0.5"
+               position="14.145 2.500 13.625"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="10" height="5" depth="0.5"
+               position="21.649 2.500 2.032"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="10" height="5" depth="0.5"
+               position="6.630 2.500 2.032"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="25" height="5" depth="0.5"
+               rotation="0 90 0"
+               position="26.397 2.500 1.078"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="10" height="5" depth="0.5"
+               rotation="0 90 0"
+               position="1.894 2.500 -6.799"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="12" height="5" depth="0.5"
+               rotation="0 90 0"
+               position="14.016 2.500 7.822"
+               src="images/wall.jpg"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="12" height="5" depth="0.5"
+               rotation="0 90 0"
+               position="1.890 2.500 7.822"
+               src="images/wall.jpg"
+               static-body></a-box>
+
+
+        <!-- Ceiling
+      <!--  <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
 src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
             <!--Floor-->
             <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 0 0" material="shader: flat; side: double; opacity: 1;
                     src: url(images/floor.jpg); repeat: 12 5">
             </a-entity>
-
-        <!-- Master Bedroom -->
+        <a-gltf-model src="bed/scene.gltf" position="6.957 0 10.033" scale="1.5 1.5 1.5" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="tvstand/scene.gltf" position="6.031 0 2.841" scale="0.003 0.003 0.003" rotation="0 360 0"></a-gltf-model>
+        <a-gltf-model src="tv/scene.gltf" position="7.108 1.16 3.124" scale="0.4 0.4 0.4" rotation="0 360 0"></a-gltf-model>
+        <!-- Master Bedroom
         <a-gltf-model src="bed/scene.gltf" position="65 0 -20" scale="2 2 2" ></a-gltf-model>
         <a-gltf-model src="night stand/scene.gltf" position="69 1 -23.5" scale="1 1 1" animation="property: rotation; loop:true; to: 0 360 0;"></a-gltf-model>
         <a-gltf-model src="night stand/scene.gltf" position="61 1 -23.5" scale="1 1 1" ></a-gltf-model>dw
@@ -32,25 +84,25 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
         <a-gltf-model src="tv/scene.gltf" position="65 1.5 -6.3" scale="0.5 0.5 0.5" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="library/scene.gltf" position="50.7 0 -16.5" scale="0.02 0.02 0.02" rotation="0 90 0"></a-gltf-model>
 
-        <!-- Living Room -->
+        <!-- Living Room
         <a-gltf-model src="sofa/scene.gltf" position="62 0 12" scale="0.06 0.06 0.06" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="smallsofa/scene.gltf" position="66.7 0 17.7" scale="2.3 2.3 2.3" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="coffetable/scene.gltf" position="66.7 0.1 13" scale="0.025 0.025 0.025"></a-gltf-model>
         <a-gltf-model src="tvstand2/scene.gltf" position="75.8 0 19" scale="0.003 0.003 0.003"  rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="tv2/scene.gltf" position="78.5d 1.39 10.9" scale="0.12 0.12 0.12"  rotation="0 270 0"></a-gltf-model>
 
-        <!-- Kitchen -->
+        <!-- Kitchen
         <a-gltf-model src="kitchen/scene.gltf" position="-10 0 0" scale="1 1 1" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="table/scene.gltf" position="55 0 13" scale="2 2 2" ></a-gltf-model>
 
-        <!-- Playroom -->
+        <!-- Playroom
         <a-gltf-model src="pooltable/scene.gltf" position="46 0 -14" scale="0.02 0.02 0.02" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="tabletennis/scene.gltf" position="47 0 -14" scale="1 1 1" rotation="0 180 0"></a-gltf-model>
 
-        <!-- Office -->
+        <!-- Office
         <a-gltf-model src="compdesk/scene.gltf" position="75.5 0.23 -20" scale="0.057 0.057 0.057" rotation="0 270 0"></a-gltf-model>
 
-        <!-- Walls  -->
+        <!-- Walls
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 50" position="-80 2.5 0" rotation="0 90 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 50" position="80 2.5 0" rotation="0 90 0" material="shader: standard;
@@ -60,7 +112,7 @@ roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 160" position="0 2.5 25" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 12 2"></a-entity>
 
-        <!-- internal walls -->
+        <!-- internal walls
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 25" position="67.8 2.5 -5" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
 
@@ -72,7 +124,7 @@ roughness: 1; src: url(images/wall.jpg); repeat: 4 2"></a-entity>
 
         <a-entity static-body geometry="primitive: box; depth: 1; height: 10; width: 21" position="25 2.5 -15" rotation="0 90 0" material="shader: standard;
 roughness: 1; src: url(images/wall.jpg); repeat: 1 1"></a-entity>
-
+-->
 
 
     </a-entity>
