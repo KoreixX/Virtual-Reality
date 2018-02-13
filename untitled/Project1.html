@@ -3,11 +3,11 @@
     <script src="js/aframe.min.js"></script>
 
 
+
 </head>
 <body>
 
 <a-scene>
-    <a-sky color="#FF0000"></a-sky>
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
             <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
@@ -16,7 +16,7 @@
     </a-entity>
 
         <!-- Ground -->
-        <a-grid static-body></a-grid>
+
 
         <!-- walls -->
         <a-box color="#39BB82"
@@ -76,7 +76,7 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
     <a-entity static-body geometry="primitive: box; depth: 1000; height: 0; width: 1000" position="0 0 0" material="shader: flat; side: double; opacity: 1;
                     src: url(images/Grass.jpg); repeat: 1000 1000">
     </a-entity>
-        <a-gltf-model src="bed/scene.gltf" position="6.957 0 10.033" scale="1.5 1.5 1.5" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="bed/scene.gltf" position="7.063 0 10.105" scale="1.5 1.5 1.5" rotation="0 180 0"></a-gltf-model>
         <a-gltf-model src="tvstand/scene.gltf" position="6.031 0 2.841" scale="0.003 0.003 0.003" rotation="0 360 0"></a-gltf-model>
         <a-gltf-model src="tv/scene.gltf" position="7.108 1.16 3.124" scale="0.4 0.4 0.4" rotation="0 360 0"></a-gltf-model>
 
@@ -87,8 +87,11 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
 
         <a-gltf-model src="table/scene.gltf" position="18.348 0 -3.688" scale="0.5 0.5 0.5" ></a-gltf-model>
         <a-gltf-model src="pc/scene.gltf" position="-57.174 -0.071 33.245" scale="0.25 0.25 0.25" rotation="0 180 0" ></a-gltf-model>
-        <a-gltf-model src="library/scene.gltf" position="14.731 1.737 8.239" scale="0.1 0.1 0.1" rotation="0 90 0"></a-gltf-model>
+        <a-gltf-model src="library/scene.gltf" position="22.344 1.737 2.801" scale="0.1 0.1 0.1" rotation="0 0 0"></a-gltf-model>
+        <a-gltf-model src="library/scene.gltf" position="19.277 1.737 2.802" scale="0.1 0.1 0.1" rotation="0 0 0"></a-gltf-model>
         <a-gltf-model src="desk/scene.gltf" position="25.490 0.052 10.879" scale="0.3 0.38 0.3" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="chair/scene.gltf" position="21.114 0.103 11.704" scale="0.3 0.38 0.3" rotation="0 180 0"></a-gltf-model>
+
         <!-- Master Bedroom
         <a-gltf-model src="bed/scene.gltf" position="65 0 -20" scale="2 2 2" ></a-gltf-model>
         <a-gltf-model src="night stand/scene.gltf" position="69 1 -23.5" scale="1 1 1" animation="property: rotation; loop:true; to: 0 360 0;"></a-gltf-model>
