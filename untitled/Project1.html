@@ -11,11 +11,13 @@
 <body>
 
 <a-scene>
-    <a-entity position="21.22 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.6" universal-controls kinematic-body>
-        <!--Define a raycaster to track the position of the mouse (i.e. where the user is looking-->
-        <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
-							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
-    </a-entity>
+
+
+        <a-camera position="21.22 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.6" universal-controls kinematic-body>
+            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
+                              radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
+        </a-camera>
+
    <a-entity id="sky" geometry="primitive: sphere; radius: 200;" material="shader: sky; side: back" sun-position-setter>
         <!--Position the sun-->
         <a-entity id="orbit">
