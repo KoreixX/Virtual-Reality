@@ -1,7 +1,10 @@
 <html>
 <head>
     <script src="js/aframe.min.js"></script>
-
+    <!--Include helper script for skybox-->
+    <script src="js/sky.js"></script>
+    <!--Include helper script for skybox-->
+    <script src="js/sunSetter.js"></script>
 
 
 </head>
@@ -14,6 +17,12 @@
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
         </a-camera>
     </a-entity>
+    <a-entity id="sky" geometry="primitive: sphere; radius: 200;" material="shader: sky; side: back" sun-position-setter>
+        <!--Position the sun-->
+        <a-entity id="orbit">
+            <a-animation attribute="rotation" from="0 0 0" to="0 90 0" dur="50000" repeat="1000"></a-animation>
+        </a-entity>
+    </a-entity>
 
         <!-- Ground -->
 
@@ -22,46 +31,54 @@
         <a-box color="#39BB82"
                width="25" height="5" depth="0.5"
                position="14.180 2.500 -11.558"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="25" height="5" depth="0.5"
                position="14.145 2.500 13.625"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="10" height="5" depth="0.5"
                position="21.649 2.500 2.032"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="10" height="5" depth="0.5"
                position="6.630 2.500 2.032"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="25" height="5" depth="0.5"
                rotation="0 90 0"
                position="26.397 2.500 1.078"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="10" height="5" depth="0.5"
                rotation="0 90 0"
                position="1.894 2.500 -6.799"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="12" height="5" depth="0.5"
                rotation="0 90 0"
                position="14.016 2.500 7.822"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
         <a-box color="#39BB82"
                width="12" height="5" depth="0.5"
                rotation="0 90 0"
                position="1.890 2.500 7.822"
-               src="images/wall.jpg"
+               material=" src: url(images/wall.jpg);
+               repeat: 12 2"
                static-body></a-box>
 
 
