@@ -17,7 +17,7 @@ AFRAME.registerComponent('sun-position-setter', {
             theta = Math.PI * (- 0.5);
             phi = 2 * Math.PI * (sunPosition.y / 360 - 0.5);
             //Debugging position
-            console.log(Math.cos(phi), Math.sin(phi) * Math.sin(theta))
+
             skyEl.setAttribute('material', 'sunPosition', {
                 x: Math.cos(phi),
                 y: Math.sin(phi) * Math.sin(theta),
