@@ -8,13 +8,23 @@
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
 
+    <script>
+        var door_opened_position = new Object({x: 1.716, y: 0, z: 1.680});
+        var door_closed_position = new Object({x: 1.716, y: 0, z: 1.778});
+        var door_closed_rotation = new Object({x: 0, y: 90, z: 0});
+        var door_opened_rotation = new Object({x: 0, y: 0, z: 0});
+
+        var isOpened = false;
+        var isClosed = true;
+    </script>
+
 </head>
 <body>
 
 <a-scene>
 
 
-    <a-entity position="21.22 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.8" universal-controls kinematic-body>
+    <a-entity position="21.22 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.8" universal-controls >
 
         <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
@@ -99,6 +109,25 @@
            static-body></a-box>
 
 
+    <script>
+        function openDoor(){
+            var my_door = document.querySelector('#OnlyDoor');
+            console.log(my_door.getAttribute('position'));
+            if(isClosed){
+                my_door.setAttribute('rotation', door_opened_rotation);
+                my_door.setAttribute('position', door_opened_position);
+                isOpened = true;
+                isClosed = false;
+            }
+            if(isOpened){
+                my_door.setAttribute('rotation', door_closed_rotation);
+                my_door.setAttribute('position', door_closed_position);
+                isOpened = true;
+                isClosed = false;
+            }
+        }
+    </script>
+
     <!-- Ceiling
   <!--  <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
 src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
@@ -112,7 +141,7 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
                     src: url(images/Grass.jpg); repeat: 1000 1000"></a-entity>
 
     <!-- Door -->
-    <a-gltf-model src="door/scene.gltf" position="1.716 0 1.778" scale="0.02 0.02 0.02"
+    <a-gltf-model objects="intersectable" id="OnlyDoor" onclick="openDoor()" src="door/scene.gltf" position="1.716 0 1.778" scale="0.02 0.02 0.02"
                   rotation="0 90 0"></a-gltf-model>
 
     <!-- Bedroom -->
@@ -147,7 +176,8 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
                   rotation="0 90 0"></a-gltf-model>
 
 
-   
+
+
 </a-scene>
 
 </body>
