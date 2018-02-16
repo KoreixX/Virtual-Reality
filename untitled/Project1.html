@@ -10,10 +10,10 @@
 
 
     <script>
-        var door_opened_position = new Object({x: 1.989, y: 1.989, z: 1.603});
-        var door_closed_position = new Object({x: 1.716, y: 0, z: 1.778});
-        var door_closed_rotation = new Object({x: 0, y: 90, z: 0});
-        var door_opened_rotation = new Object({x: 0, y: 270, z: 0});
+        var door_opened_position = new Object({x: 1.859, y: 2.122, z: 0.080});
+        var door_closed_position = new Object({x: 3.388, y: 1.989, z: 1.861})
+        var door_closed_rotation = new Object({x: 0, y: 270, z: 0});
+        var door_opened_rotation = new Object({x: 0, y: 90, z: 0});
 
         var isOpened = false;
         var isClosed = true;
@@ -27,7 +27,6 @@
 
 
     <a-entity position="25 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.8" universal-controls >
-
         <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
     </a-entity>
@@ -130,13 +129,13 @@
     </script>
 
     <!-- Door -->
-    <a-entity  geometry="primitive: box; depth: 1; height: 1; width: 1" material="transparent: true;" onclick="openDoor()" id="OnlyDoor" position="1.859 2.122 0.080"   class="intersectable">
+    <a-entity  geometry="primitive: box; depth: 1; height: 1; width: 1" material="visible: false;" onclick="openDoor()" id="OnlyDoor" position="1.859 2.122 0.080"   class="intersectable">
         <a-gltf-model  src="door/scene.gltf" position="-0.138 -1.969 1.7" scale="0.02 0.02 0.02" rotation="0 90 0"></a-gltf-model>
     </a-entity>
 
     <a-box material="transparent:true; opacity:0" depth="1" height="1" width="0.5" sound="src: url(audio/xp.mp3); on: click"  class="intersectable" position="22.470 0.853 12.164"></a-box>
 
-    <a-video src="video/pokemon.mp4" loop="false" height="2.7" width="5" position="7.126 2.919 3.409"></a-video>
+   <<a-video src="video/pokemon.mp4" loop="false" height="2.7" width="5" position="7.126 2.919 3.409"></a-video>
 
 
     <!-- Ceiling
