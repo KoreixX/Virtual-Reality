@@ -8,6 +8,7 @@
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
 
+
     <script>
         var door_opened_position = new Object({x: 1.716, y: 0, z: 1.680});
         var door_closed_position = new Object({x: 1.716, y: 0, z: 1.778});
@@ -16,6 +17,7 @@
 
         var isOpened = false;
         var isClosed = true;
+
     </script>
 
 </head>
@@ -122,11 +124,19 @@
             if(isOpened){
                 my_door.setAttribute('rotation', door_closed_rotation);
                 my_door.setAttribute('position', door_closed_position);
-                isOpened = true;
-                isClosed = false;
+                isOpened = false;
+                isClosed = true;
             }
         }
     </script>
+
+
+
+
+    <a-box material="transparent:true; opacity:0" depth="1" height="1" width="0.5" sound="src: url(audio/xp.mp3); on: click"  class="intersectable" position="22.470 0.853 12.164"></a-box>
+
+    <a-video src="video/300.mp4" height="2.7" width="5" position="7.126 2.919 3.409"></a-video>
+
 
     <!-- Ceiling
   <!--  <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
@@ -140,8 +150,10 @@ src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
     <a-entity static-body geometry="primitive: box; depth: 1000; height: 0; width: 1000" position="0 0 0" material="shader: flat; side: double; opacity: 1;
                     src: url(images/Grass.jpg); repeat: 1000 1000"></a-entity>
 
+
+
     <!-- Door -->
-    <a-gltf-model objects="intersectable" id="OnlyDoor" onclick="openDoor()" src="door/scene.gltf" position="1.716 0 1.778" scale="0.02 0.02 0.02"
+    <a-gltf-model class="intersectable" id="OnlyDoor" onclick="openDoor()" src="door/scene.gltf" position="1.716 0 1.778" scale="0.02 0.02 0.02"
                   rotation="0 90 0"></a-gltf-model>
 
     <!-- Bedroom -->
