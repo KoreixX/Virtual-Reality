@@ -8,14 +8,14 @@ Project to design and create our dream house, we are allowed to use 3D models or
 - aframe-extras.min.js
 
 ## Description
-#### The application is written in HTML, JavaScript, and A-Frame.
-#### The application is a prototype for a dream house.
-#### A plane with a texture of grass was implemented to make a base for the floor and the house, on top of that an entity with the geometry of a box and given a texture of a floor was implemented to create the base of the house.
-#### To create walls, a-box tag was used and also it was given specific attributes to sorround the floor, and it was also given a texture.
-#### The ceiling of the house was created by using the a-entity tag with a geometry of a box and given specific attributes and texture.
-#### An animated sky was added using the libraries sky.js and sunSetter.js, the animation of the sky was given using the a-animation tag and providing the initial and final sun position, duration of the animation, and repetition.
-#### To decorate the house, gLTF models were used to fill the house, and they were loaded using a-gltf-model tag with appropiate attributes such as, position, rotation, scale, etc. Also each model is not larger than 500kb for mobile run efficiency.
-#### Below are the links for each of the models used in this project.
+- The application is written in HTML, JavaScript, and A-Frame.
+- The application is a prototype for a dream house.
+- A plane with a texture of grass was implemented to make a base for the floor and the house, on top of that an entity with the geometry of a box and given a texture of a floor was implemented to create the base of the house.
+- To create walls, a-box tag was used and also it was given specific attributes to sorround the floor, and it was also given a texture.
+- The ceiling of the house was created by using the a-entity tag with a geometry of a box and given specific attributes and texture.
+- An animated sky was added using the libraries sky.js and sunSetter.js, the animation of the sky was given using the a-animation tag and providing the initial and final sun position, duration of the animation, and repetition.
+- To decorate the house, gLTF models were used to fill the house, and they were loaded using a-gltf-model tag with appropiate attributes such as, position, rotation, scale, etc. Also each model is not larger than 500kb for mobile run efficiency.
+- Below are the links for each of the models used in this project.
 ### Bedroom
 - Bed: https://sketchfab.com/models/715fd6855bf7437e8e239ee541a7c2e8
 - TV Stand: https://sketchfab.com/models/65b67b81ee194c5b961fdeb892f5c07e
