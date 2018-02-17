@@ -38,6 +38,7 @@ Project to design and create our dream house, we are allowed to use 3D models or
 ## Interactable objects
 - Added action to the house door so when the user click the lock then it will open or close. Used a gltf model for the door, and wrapped the lock section with a box, then created a fuction which when called changes the position and rotatior of the door.
 - Added sound to the CPU in the gltf model located in the office room, also wrapped the model in a box so when it is clicked it will trigger Windows XP Startup sound.
-- Added a switch for the light using boxes so the user has control over it, when the switch is clicked a function for the light will be called each time it is clicked the intensity of the light will change, in this case the function only has four levels of intesity  
+- Added a switch for the light using boxes so the user has control over it, when the switch is clicked a function for the light will be called each time it is clicked the intensity of the light will change, in this case the function only has four levels of intensity, which allows the user to have control over the light in the environment.
+- Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
 
 
