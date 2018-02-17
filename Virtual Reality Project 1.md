@@ -35,5 +35,9 @@ Project to design and create our dream house, we are allowed to use 3D models or
 - Desktop Chair: https://sketchfab.com/models/3177fdf2630c4922a43fecb876d96e1d
 - Extra Table: https://sketchfab.com/models/b782be2e0040478da98d24910cb078a6
 
+## Interactable objects
+- Added action to the house door so when the user click the lock then it will open or close. Used a gltf model for the door, and wrapped the lock section with a box, then created a fuction which when called changes the position and rotatior of the door.
+- Added sound to the CPU in the gltf model located in the office room, also wrapped the model in a box so when it is clicked it will trigger Windows XP Startup sound.
+- Added a switch for the light using boxes so the user has control over it, when the switch is clicked a function for the light will be called each time it is clicked the intensity of the light will change, in this case the function only has four levels of intesity  
 
 
