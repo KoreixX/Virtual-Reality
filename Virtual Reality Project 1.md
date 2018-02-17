@@ -16,3 +16,4 @@ The ceiling of the house was created by using the a-entity tag with a geometry o
 To decorate the house, gLTF models were used to fill the house, and they were loaded using a-gltf-model tag with appropiate attributes such as, position, rotation, scale, etc. Also each model is not larger than 500kb for mobile run efficiency.
 Below are the links for each of the models used in this project.
 Bed: https://sketchfab.com/models/715fd6855bf7437e8e239ee541a7c2e8
+
