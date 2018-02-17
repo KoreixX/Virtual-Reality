@@ -7,4 +7,6 @@
 #### - sunSetter.js
 #### - aframe-extras.min.js
 
+## Description
+#### The application is written in HTML, JavaScript, and A-Frame.
 
