@@ -1,23 +1,21 @@
 <html>
 <head>
+
+    <!-- A-frame scripts for different options -->
     <script src="js/aframe.min.js"></script>
-    <!--Include helper script for skybox-->
     <script src="js/sky.js"></script>
-    <!--Include helper script for skybox-->
     <script src="js/sunSetter.js"></script>
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
-
-
+    <!-- Global Variables for Opening door function -->
     <script>
-        var door_opened_position = new Object({x: 1.859, y: 2.122, z: 0.080});
-        var door_closed_position = new Object({x: 3.388, y: 1.989, z: 1.861})
-        var door_closed_rotation = new Object({x: 0, y: 270, z: 0});
-        var door_opened_rotation = new Object({x: 0, y: 90, z: 0});
+        var dOpenPosition = new Object({x: 1.859, y: 2.037, z: 0.080});
+        var dClosedPosition = new Object({x: 3.388, y: 1.989, z: 1.861})
+        var dClosedRotation = new Object({x: 0, y: 270, z: 0});
+        var dOpenRotation = new Object({x: 0, y: 360, z: 0});
 
         var isOpened = false;
         var isClosed = true;
-
     </script>
 
 </head>
@@ -25,8 +23,8 @@
 
 <a-scene>
 
-
-    <a-entity position="25 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.8" universal-controls >
+    <!-- Camera Set up with Kinematic body so we cannot walk through walls -->
+    <a-entity universal-controls kinematic-body position="-3.265 2.888 1.273" rotation="-1.476 270 0" camera="userHeight: 1.8">
         <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
     </a-entity>
@@ -34,7 +32,7 @@
     <!-- Animated Sky -->
     <a-entity id="sky" geometry="primitive: sphere; radius: 200;" material="shader: sky; side: back"
               sun-position-setter>
-        <!--Position the sun-->
+        <!-- Sun Position and Duration and Repetition values for animation -->
         <a-entity id="orbit">
             <a-animation attribute="rotation" from="0 0 0" to="0 90 0" dur="50000" repeat="1000"></a-animation>
         </a-entity>
@@ -109,80 +107,93 @@
                repeat: 12 2"
            static-body></a-box>
 
+    <!-- Ceiling -->
+   <a-entity static-body geometry="primitive: box; depth: 25; height: 0.1; width: 24.9" position="14.145 4.921 1.023" material="shader: flat; side: double; opacity: 1; src: url(images/wall.jpg); repeat: 3 3"></a-entity>
 
+    <!--Floor-->
+    <a-entity static-body geometry="primitive: box; depth: 25; height: 0.1; width: 24.9" position="14.124 0 1.219" material="shader: flat; side: double; opacity: 1; src: url(images/floor.jpg); repeat: 4 4"></a-entity>
+
+    <!--Grass-->
+    <a-plane static-body position="12.526 0 1.262" rotation="-90 0 0" width="100" height="100" depth="1" material="src: url(images/Grass.jpg); side: double; repeat: 100 100;"></a-plane>
+
+    <!-- Bedroom Models-->
+    <a-gltf-model src="bed/scene.gltf" position="7.063 0 10.105" scale="1.5 1.5 1.5" rotation="0 180 0"></a-gltf-model>
+    <a-gltf-model src="tvstand/scene.gltf" position="6.031 0 2.841" scale="0.003 0.003 0.003"a rotation="0 360 0"></a-gltf-model>
+    <a-gltf-model src="tv/scene.gltf" position="7.108 1.16 3.124" scale="0.4 0.4 0.4" rotation="0 360 0"></a-gltf-model>
+    <a-gltf-model src="shelf/scene.gltf" position="2.322 0 4.320" scale="2 2 2" rotation="0 0 0"></a-gltf-model>
+
+    <!-- Living Room Models-->
+    <a-gltf-model src="smallsofa/scene.gltf" position="11.798 0 -6.469" scale="2.3 2.3 2.3" rotation="0 270 0"></a-gltf-model>
+    <a-gltf-model src="coffetable/scene.gltf" position="7.570 0.1 -7.026" scale="0.025 0.025 0.025"></a-gltf-model>
+    <a-gltf-model src="tvstand2/scene.gltf" position="0.403 0 -0.964" scale="0.003 0.003 0.003" rotation="0 90 0"></a-gltf-model>
+    <a-gltf-model src="tv2/scene.gltf" position="3.015 1.39 -4.033" scale="0.12 0.12 0.12" rotation="0 90 0"></a-gltf-model>
+
+    <!-- Office Models-->
+    <a-gltf-model src="table/scene.gltf" position="17.961 0 -2.607" scale="0.5 0.5 0.5"></a-gltf-model>
+    <a-gltf-model src="pc/scene.gltf" position="-57.174 -0.071 33.245" scale="0.25 0.25 0.25" rotation="0 180 0"></a-gltf-model>
+    <a-gltf-model src="library/scene.gltf" position="22.344 1.737 2.801" scale="0.1 0.1 0.1" rotation="0 0 0"></a-gltf-model>
+    <a-gltf-model src="library/scene.gltf" position="19.277 1.737 2.802" scale="0.1 0.1 0.1" rotation="0 0 0"></a-gltf-model>
+    <a-gltf-model src="desk/scene.gltf" position="25.490 0.052 10.879" scale="0.3 0.38 0.3" rotation="0 180 0"></a-gltf-model>
+    <a-gltf-model src="chair/scene.gltf" position="21.114 0.103 11.704" scale="0.3 0.38 0.3" rotation="0 180 0"></a-gltf-model>
+    <a-gltf-model src="poster/scene.gltf" position="14.256 2.561 7.425" scale="0.08 0.08 0.08" rotation="0 90 0"></a-gltf-model>
+
+    <!--Lighting-->
+    <a-light type="directional" color="grey" position="-.5 1 1" angle="60" decay="1" intensity=".6" ></a-light>
+    <a-light id="light" type="ambient" color="white" position="0 0 0" angle="60" decay="1" intensity="1"></a-light>
+
+    <!--Function levels of light when clicked -->
+    <script>
+        function fourLevelLight(){
+            var light = document.querySelector('#light');
+            var current_intensity = light.getAttribute('intensity');
+
+            if(current_intensity == 1)
+                light.setAttribute('intensity', .5);
+            else if(current_intensity == .5)
+                light.setAttribute('intensity', 0);
+            else if(current_intensity == 0)
+                light.setAttribute('intensity', 2);
+            else
+                light.setAttribute('intensity', 1);
+        }
+    </script>
+
+    <!-- Function for opening door -->
     <script>
         function openDoor(){
             var my_door = document.querySelector('#OnlyDoor');
             if(isClosed){
-                my_door.setAttribute('rotation', door_opened_rotation);
-                my_door.setAttribute('position', door_opened_position);
+                my_door.setAttribute('rotation', dClosedRotation);
+                my_door.setAttribute('position', dClosedPosition);
                 isOpened = true;
                 isClosed = false;
             }
-            if(isOpened){
-                my_door.setAttribute('rotation', door_closed_rotation);
-                my_door.setAttribute('position', door_closed_position);
+            else{
+                my_door.setAttribute('rotation', dOpenRotation);
+                my_door.setAttribute('position', dOpenPosition);
                 isOpened = false;
                 isClosed = true;
             }
         }
     </script>
 
+    <!-- Interactable objects (switch, door, cpu) -->
+    <!-- Light Switch -->
+    <a-box onclick="fourLevelLight()" material="src: url(images/switch.jpg); side: double; repeat: 1 1" width="16" height="22" depth="1" position="2.145 2.048 -0.630" rotation="0 -90 0" scale="0.015 0.015 0.015" static-body class="intersectable"></a-box>
+
     <!-- Door -->
-    <a-entity  geometry="primitive: box; depth: 1; height: 1; width: 1" material="visible: false;" onclick="openDoor()" id="OnlyDoor" position="1.859 2.122 0.080"   class="intersectable">
+    <a-entity  geometry="primitive: box; depth: 1; height: 1; width: 1" material="visible: false;" onclick="openDoor()" id="OnlyDoor" position="1.859 2.037 0.080"   class="intersectable">
         <a-gltf-model  src="door/scene.gltf" position="-0.138 -1.969 1.7" scale="0.02 0.02 0.02" rotation="0 90 0"></a-gltf-model>
     </a-entity>
 
+    <!-- Surrounded CPU in bedroom with a box and added a sound when clicked -->
     <a-box material="transparent:true; opacity:0" depth="1" height="1" width="0.5" sound="src: url(audio/xp.mp3); on: click"  class="intersectable" position="22.470 0.853 12.164"></a-box>
 
-   <<a-video src="video/pokemon.mp4" loop="false" height="2.7" width="5" position="7.126 2.919 3.409"></a-video>
-
-
-    <!-- Ceiling
-  <!--  <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 160" position="0 7 0" material="shader: flat; side: double; opacity: 1;
-src: url(images/ceiling2.jpg); repeat: 20 12"></a-entity>
-
-    <!--Floor-->
-    <a-entity static-body geometry="primitive: box; depth: 25; height: 0.1; width: 24.9" position="14.124 0 1.219"
-              material="shader: flat; side: double; opacity: 1;
-                    src: url(images/floor.jpg); repeat: 4 4"></a-entity>
-    <!--Grass-->
-    <a-entity static-body geometry="primitive: box; depth: 1000; height: 0; width: 1000" position="0 0 0" material="shader: flat; side: double; opacity: 1;
-                    src: url(images/Grass.jpg); repeat: 1000 1000"></a-entity>
-
-    <!-- Bedroom -->
-    <a-gltf-model src="bed/scene.gltf" position="7.063 0 10.105" scale="1.5 1.5 1.5" rotation="0 180 0"></a-gltf-model>
-    <a-gltf-model src="tvstand/scene.gltf" position="6.031 0 2.841" scale="0.003 0.003 0.003"
-                  rotation="0 360 0"></a-gltf-model>
-    <a-gltf-model src="tv/scene.gltf" position="7.108 1.16 3.124" scale="0.4 0.4 0.4" rotation="0 360 0"></a-gltf-model>
-    <a-gltf-model src="shelf/scene.gltf" position="2.322 0 4.320" scale="2 2 2" rotation="0 0 0"></a-gltf-model>
-
-    <!-- Living Room -->
-    <a-gltf-model src="smallsofa/scene.gltf" position="11.798 0 -6.469" scale="2.3 2.3 2.3"
-                  rotation="0 270 0"></a-gltf-model>
-    <a-gltf-model src="coffetable/scene.gltf" position="7.570 0.1 -7.026" scale="0.025 0.025 0.025"></a-gltf-model>
-    <a-gltf-model src="tvstand2/scene.gltf" position="0.403 0 -0.964" scale="0.003 0.003 0.003"
-                  rotation="0 90 0"></a-gltf-model>
-    <a-gltf-model src="tv2/scene.gltf" position="3.015 1.39 -4.033" scale="0.12 0.12 0.12"
-                  rotation="0 90 0"></a-gltf-model>
-
-    <!-- Office -->
-    <a-gltf-model src="table/scene.gltf" position="18.348 0 -3.688" scale="0.5 0.5 0.5"></a-gltf-model>
-    <a-gltf-model src="pc/scene.gltf" position="-57.174 -0.071 33.245" scale="0.25 0.25 0.25"
-                  rotation="0 180 0"></a-gltf-model>
-    <a-gltf-model src="library/scene.gltf" position="22.344 1.737 2.801" scale="0.1 0.1 0.1"
-                  rotation="0 0 0"></a-gltf-model>
-    <a-gltf-model src="library/scene.gltf" position="19.277 1.737 2.802" scale="0.1 0.1 0.1"
-                  rotation="0 0 0"></a-gltf-model>
-    <a-gltf-model src="desk/scene.gltf" position="25.490 0.052 10.879" scale="0.3 0.38 0.3"
-                  rotation="0 180 0"></a-gltf-model>
-    <a-gltf-model src="chair/scene.gltf" position="21.114 0.103 11.704" scale="0.3 0.38 0.3"
-                  rotation="0 180 0"></a-gltf-model>
-    <a-gltf-model src="poster/scene.gltf" position="14.256 2.561 7.425" scale="0.08 0.08 0.08"
-                  rotation="0 90 0"></a-gltf-model>
-
-
-
+    <!-- Text or Instructions for Interactable Objects -->
+    <a-text value="Click CPU ->" color="black" rotation="0 180 0" position="24.185 1.091 11.399"></a-text>
+    <a-text value="Open ->" color="black"  rotation="0 270 0" position="1.571 2.096 -1.091"></a-text>
+    <a-text value="Close ->" color="black"  rotation="0 180 0" position="4.584 1.991 1.781"></a-text>
+    <a-text value="<- Light Levels" color="black"  rotation="0 90 0" position="2.149 2.030 -0.825"></a-text>
 
 </a-scene>
 
