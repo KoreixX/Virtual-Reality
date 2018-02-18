@@ -5,7 +5,7 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/sky.js"></script>
     <script src="js/sunSetter.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.3.0/dist/aframe-extras.min.js"></script>
 
     <!-- Global Variables for Opening door function -->
     <script>
@@ -22,15 +22,14 @@
 <body>
 
 <a-scene>
-
-    <!-- Camera Set up with Kinematic body so we cannot walk through walls -->
-    <a-entity universal-controls kinematic-body position="-3.265 2.888 1.273" rotation="-1.476 270 0"
-              camera="userHeight: 1.6">
+    <!-- Camera Set Up -->
+<a-entity position="-3.265 1.4 1.273">
+    <a-camera universal-controls rotation="-1.476 270 0" camera="userHeight: 1.6">
         <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat"
                   position="0 0 -0.75"></a-entity>
-    </a-entity>
-
+    </a-camera>
+</a-entity>
     <!-- Animated Sky -->
     <a-entity id="sky" geometry="primitive: sphere; radius: 200;" material="shader: sky; side: back"
               sun-position-setter>
