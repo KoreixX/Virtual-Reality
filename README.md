@@ -41,6 +41,7 @@ Project to design and create our dream house, we are allowed to use 3D models or
 - Extra Table: https://sketchfab.com/models/b782be2e0040478da98d24910cb078a6
 
 ## Interactable objects
+- Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
 - Added action to the house door so when the user click the lock then it will open or close. Used a gltf model for the door, and wrapped the lock section with a box, then created a fuction which when called changes the position and rotatior of the door.
 ![pic6](https://user-images.githubusercontent.com/32318210/36348727-f86d781a-143b-11e8-861f-89b693172016.PNG)
 ![pic7](https://user-images.githubusercontent.com/32318210/36348726-f85ca706-143b-11e8-8d15-4a226803b3c6.PNG) 
@@ -50,6 +51,6 @@ Project to design and create our dream house, we are allowed to use 3D models or
 ![pic9](https://user-images.githubusercontent.com/32318210/36348761-7ec3a312-143c-11e8-8f2b-f4e195fa4b25.PNG)
 ![pic10](https://user-images.githubusercontent.com/32318210/36348758-7e94382a-143c-11e8-9416-a3848edc5b0f.PNG)
 ![pic11](https://user-images.githubusercontent.com/32318210/36348759-7ea4d342-143c-11e8-8f5f-9f7fc8ba023e.PNG)
-- Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
+
 
 
