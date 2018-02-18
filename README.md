@@ -10,12 +10,15 @@ Project to design and create our dream house, we are allowed to use 3D models or
 
 ## Description
 - The application is written in HTML, JavaScript, and A-Frame.
-- The application is a prototype for a dream house.
 - A plane with a texture of grass was implemented to make a base for the floor and the house, on top of that an entity with the geometry of a box and given a texture of a floor was implemented to create the base of the house.
 ![pic1](https://user-images.githubusercontent.com/32318210/36348669-adf03706-143a-11e8-979e-a61f43004f6c.PNG)
 - To create walls, a-box tag was used and also it was given specific attributes to sorround the floor, and it was also given a texture.
+![pic2](https://user-images.githubusercontent.com/32318210/36348679-e8068788-143a-11e8-82ef-51b3e0d81d6a.PNG)
 - The ceiling of the house was created by using the a-entity tag with a geometry of a box and given specific attributes and texture.
+![pic3](https://user-images.githubusercontent.com/32318210/36348685-0ccf63b4-143b-11e8-9e2f-ecde9596a5e1.PNG)
 - An animated sky was added using the libraries sky.js and sunSetter.js, the animation of the sky was given using the a-animation tag and providing the initial and final sun position, duration of the animation, and repetition.
+![pic4](https://user-images.githubusercontent.com/32318210/36348695-299c53e4-143b-11e8-92c8-336750981ea8.PNG)
+![pic5](https://user-images.githubusercontent.com/32318210/36348702-5d8a9cb0-143b-11e8-9583-fc7e930bd200.PNG)
 - To decorate the house, gLTF models were used to fill the house, and they were loaded using a-gltf-model tag with appropiate attributes such as, position, rotation, scale, etc. Also each model is not larger than 500kb for mobile run efficiency.
 - Below are the links for each of the models used in this project.
 ### Bedroom
