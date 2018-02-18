@@ -12,6 +12,7 @@ Project to design and create our dream house, we are allowed to use 3D models or
 - The application is written in HTML, JavaScript, and A-Frame.
 - The application is a prototype for a dream house.
 - A plane with a texture of grass was implemented to make a base for the floor and the house, on top of that an entity with the geometry of a box and given a texture of a floor was implemented to create the base of the house.
+
 - To create walls, a-box tag was used and also it was given specific attributes to sorround the floor, and it was also given a texture.
 - The ceiling of the house was created by using the a-entity tag with a geometry of a box and given specific attributes and texture.
 - An animated sky was added using the libraries sky.js and sunSetter.js, the animation of the sky was given using the a-animation tag and providing the initial and final sun position, duration of the animation, and repetition.
