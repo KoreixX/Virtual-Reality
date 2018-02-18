@@ -19,14 +19,17 @@
     </script>
 
 </head>
-<body>
+<body>4
 
 <a-scene>
     <!-- Camera Set Up -->
-    <a-entity position="21.22 0 -0.72" rotation="-15.8 98.66 0" camera="userHeight: 1.6" universal-controls kinematic-body>
-        <!--Define a raycaster to track the position of the mouse (i.e. where the user is looking-->
-        <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
-							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
+    <a-entity position="-15-153 0.816 1.273">
+        <a-camera universal-controls rotation="-1.476 270 0"  camera="userHeight: 1.6">
+            <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
+							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat"
+                      position="0 0 -0.75"></a-entity>
+        </a-camera>
+    </a-entity>
     </a-entity>
     <!-- Animated Sky -->
     <a-entity id="sky" geometry="primitive: sphere; radius: 200;" material="shader: sky; side: back"
@@ -107,12 +110,10 @@
            static-body></a-box>
 
     <!-- Ceiling -->
-    <a-entity static-body geometry="primitive: box; depth: 25; height: 0.1; width: 24.9" position="14.145 4.921 1.023"
-              material="shader: flat; side: double; opacity: 1; src: url(images/wall.jpg); repeat: 3 3"></a-entity>
+    <a-plane  material="src: url(images/wall.jpg); side: double; repeat: 3 3" height="25" width="24.9"  position="14.145 4.998 1.023" rotation="90 0 0"></a-plane>
 
     <!--Floor-->
-    <a-entity static-body geometry="primitive: box; depth: 25; height: 0.1; width: 24.9" position="14.124 0 1.219"
-              material="shader: flat; side: double; opacity: 1; src: url(images/floor.jpg); repeat: 4 4"></a-entity>
+    <a-plane  material="src: url(images/floor.jpg); side: double; repeat: 3 3" height="25" width="24.9" position="14.145 0.038 1.023" rotation="90 0 0"></a-plane>
 
     <!--Grass-->
     <a-plane static-body position="12.526 0 1.262" rotation="-90 0 0" width="100" height="100" depth="1"
@@ -199,8 +200,7 @@
     <!-- Interactable objects (switch, door, cpu) -->
     <!-- Light Switch -->
     <a-box color="red" material="side: double; repeat: 1 1" width="5"
-           height="10" depth="1" position="2.152 2.048 -0.630" rotation="0 -90 0" scale="0.015 0.015 0.015" static-body
-           class="intersectable"></a-box>
+           height="10" depth="1" position="2.152 2.048 -0.630" rotation="0 -90 0" scale="0.015 0.015 0.015"></a-box>
     <a-box onclick="fourLevelLight()" color="black" material="side: double; repeat: 1 1" width="15"
            height="21" depth="1" position="2.145 2.048 -0.630" rotation="0 -90 0" scale="0.015 0.015 0.015" static-body
            class="intersectable"></a-box>
@@ -222,8 +222,14 @@
     <a-text value="Close ->" color="black" rotation="0 180 0" position="4.584 1.991 1.781"></a-text>
     <a-text value="<- Light Levels" color="black" rotation="0 90 0" position="2.149 2.030 -0.825"></a-text>
     <a-entity
-            text="value:Hello; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/snippet/Snippet.json;"
-            rotation="0 270 0" scale="40 40 40" position="1.633 2.448 9.115"></a-entity>
+            text="value:CS 4331-002; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/snippet/Snippet.json;"
+            rotation="0 270 0" scale="15 15 15" position="1.633 4.056 -4.149"></a-entity>
+    <a-entity
+            text="value:Project 1 - Dream House; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/snippet/Snippet.json;"
+            rotation="0 270 0" scale="15 15 15" position="1.633 3.4 -4.121"></a-entity>
+    <a-entity
+            text="value:Mayur Bhakta; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/snippet/Snippet.json;"
+            rotation="0 270 0" scale="15 15 15" position="1.633 2.716 -4.093"></a-entity>
     <a-entity
             text="value:Welcome; color:#000000; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/snippet/Snippet.json;"
             rotation="0 270 0" scale="40 40 40" position="1.645 0.246 25.149"></a-entity>
