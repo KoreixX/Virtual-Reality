@@ -8,7 +8,6 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ## Libraries Used
 - aframe.min.js
 - sky.js
-- sunSetter.js
 - aframe-extras.min.js
 
 ## Description
