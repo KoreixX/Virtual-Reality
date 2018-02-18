@@ -24,7 +24,7 @@
 <a-scene>
     <!-- Camera Set Up -->
     <a-entity position="-15-153 1.4 1.273">
-        <a-camera universal-controls rotation="-1.476 270 0" camera="userHeight: 1.6">
+        <a-camera universal-controls wasd-controls="fly:true acceleration: 300" rotation="-1.476 270 0"  camera="userHeight: 1.6">
             <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat"
                       position="0 0 -0.75"></a-entity>
