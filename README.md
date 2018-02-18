@@ -1,7 +1,9 @@
 # Dream House Project
 ## CS 4331-002 - Mayur Bhakta
 Project to design and create our dream house, we are allowed to use 3D models or create our own models for the house and include decorations.
-
+## Click the image below to watch a short video demo.
+![p1 bhaktamayur(https://user-images.githubusercontent.com/32318210/36354319-fa7b4018-1497-11e8-8063-c97399a0071f.jpg)]
+(https://www.youtube.com/watch?v=2tHniNQ6YI0&feature=youtu.be)
 ## Libraries Used
 - aframe.min.js
 - sky.js
