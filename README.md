@@ -46,6 +46,10 @@ Project to design and create our dream house, we are allowed to use 3D models or
 ![pic7](https://user-images.githubusercontent.com/32318210/36348726-f85ca706-143b-11e8-8d15-4a226803b3c6.PNG) 
 - Added sound to the CPU in the gltf model located in the office room, also wrapped the model in a box so when it is clicked it will trigger Windows XP Startup sound.
 - Added a switch for the light using boxes so the user has control over it, when the switch is clicked a function for the light will be called each time it is clicked the intensity of the light will change, in this case the function only has four levels of intensity, which allows the user to have control over the light in the environment.
+![pic8](https://user-images.githubusercontent.com/32318210/36348760-7eb4605a-143c-11e8-9b08-70185b338950.PNG)
+![pic9](https://user-images.githubusercontent.com/32318210/36348761-7ec3a312-143c-11e8-8f2b-f4e195fa4b25.PNG)
+![pic10](https://user-images.githubusercontent.com/32318210/36348758-7e94382a-143c-11e8-9416-a3848edc5b0f.PNG)
+![pic11](https://user-images.githubusercontent.com/32318210/36348759-7ea4d342-143c-11e8-8f5f-9f7fc8ba023e.PNG)
 - Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
 
 
