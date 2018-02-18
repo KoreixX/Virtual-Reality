@@ -39,7 +39,8 @@ Project to design and create our dream house, we are allowed to use 3D models or
 - Poster: https://sketchfab.com/models/cf6fe6a27d5f4413a0479a200884b08a
 - Desktop Chair: https://sketchfab.com/models/3177fdf2630c4922a43fecb876d96e1d
 - Extra Table: https://sketchfab.com/models/b782be2e0040478da98d24910cb078a6
-
+### Extra
+- Car: https://sketchfab.com/models/31d8d36e371643d1a6cbd21a21a3de25# 
 ## Interactable objects
 - Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
 - Added action to the house door so when the user click the lock then it will open or close. Used a gltf model for the door, and wrapped the lock section with a box, then created a fuction which when called changes the position and rotatior of the door.
