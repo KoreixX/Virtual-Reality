@@ -9,7 +9,6 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 - aframe.min.js
 - sky.js
 - aframe-extras.min.js
-
 ## Description
 - The application is written in HTML, JavaScript, and A-Frame.
 - A plane with a texture of grass was implemented to make a base for the floor and the house, on top of that an entity with the geometry of a box and given a texture of a floor was implemented to create the base of the house.
@@ -46,10 +45,49 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ## Interactable objects
 - Added text to each of the interactable objects in the application so the user knows which objects can be clicked.
 - Added action to the house door so when the user click the lock then it will open or close. Used a gltf model for the door, and wrapped the lock section with a box, then created a fuction which when called changes the position and rotatior of the door.
+```javascript
+    var isOpened = false;
+        var isClosed = true;
+        function openDoor() {
+
+            var my_door = document.querySelector('#OnlyDoor');
+            if (isClosed) {
+                my_door.setAttribute('rotation', "0 270 0");
+                my_door.setAttribute('position', "3.388 1.989 1.861");
+                isOpened = true;
+                isClosed = false;
+            }
+            else {
+                my_door.setAttribute('rotation', "0 360 0");
+                my_door.setAttribute('position', "1.859 2.037 0.080");
+                isOpened = false;
+                isClosed = true;
+            }
+        }
+```
 ![pic6](https://user-images.githubusercontent.com/32318210/36348727-f86d781a-143b-11e8-861f-89b693172016.PNG)
 ![pic7](https://user-images.githubusercontent.com/32318210/36348726-f85ca706-143b-11e8-8d15-4a226803b3c6.PNG) 
 - Added sound to the CPU in the gltf model located in the office room, also wrapped the model in a box so when it is clicked it will trigger Windows XP Startup sound.
+```javascript
+<a-box material="transparent:true; opacity:0" depth="1" height="1" width="0.5"
+           sound="src: url(audio/xp.mp3); on: click" class="intersectable" position="22.470 0.853 12.164"></a-box>
+```
 - Added a switch for the light using boxes so the user has control over it, when the switch is clicked a function for the light will be called each time it is clicked the intensity of the light will change, in this case the function only has four levels of intensity, which allows the user to have control over the light in the environment.
+```javascript
+ function fourLevelLight() {
+            var light = document.querySelector('#light');
+            var current_intensity = light.getAttribute('intensity');
+
+            if (current_intensity == 1)
+                light.setAttribute('intensity', .5);
+            else if (current_intensity == .5)
+                light.setAttribute('intensity', 0);
+            else if (current_intensity == 0)
+                light.setAttribute('intensity', 2);
+            else
+                light.setAttribute('intensity', 1);
+        }
+```
 ![pic8](https://user-images.githubusercontent.com/32318210/36348760-7eb4605a-143c-11e8-9b08-70185b338950.PNG)
 ![pic9](https://user-images.githubusercontent.com/32318210/36348761-7ec3a312-143c-11e8-8f2b-f4e195fa4b25.PNG)
 ![pic10](https://user-images.githubusercontent.com/32318210/36348758-7e94382a-143c-11e8-9416-a3848edc5b0f.PNG)
