@@ -2,7 +2,7 @@
 ## CS 4331-002 - Mayur Bhakta
 Project to design and create our dream house, we are allowed to use 3D models or create our own models for the house and include decorations.
 #### Click the image below to watch a short video demo.
-[![ScreenShot](/screenshot/project1.png)](https://www.youtube.com/watch?v=uLcRlKjseq8&feature=youtu.be)
+[![ScreenShot](/screenshot/p1.BhaktaMayur.jpg)](https://www.youtube.com/watch?v=uLcRlKjseq8&feature=youtu.be)
 #### Click the link below for a live demo.
 https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ## Libraries Used
