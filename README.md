@@ -95,5 +95,7 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ![pic11](https://user-images.githubusercontent.com/32318210/36348759-7ea4d342-143c-11e8-8f5f-9f7fc8ba023e.PNG)
 
 ## References
-
+- https://aframe.io/
+- https://www.youtube.com/watch?v=dv6_C4UqTfs&list=PLRtjMdoYXLf4inSULAHyCMqpIUj4cmBTr
+- https://stackoverflow.com/questions/42087566/add-speed-to-wasd-controls-for-a-frame
 
