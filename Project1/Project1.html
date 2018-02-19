@@ -21,9 +21,9 @@
 </head>
 <body>
 
-<a-scene physics>
+<a-scene physics="gravity: 0">
     <!-- Camera Set Up -->
-    <a-entity universal-controls kinematic-body position="-15-153 0.816 1.273" rotation="-1.476 270 0"  camera="userHeight: 1.6">
+    <a-entity universal-controls kinematic-body position="-15-153 2.228 1.273" rotation="-1.476 270 0"  camera="userHeight: 0">
             <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
 							  radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat"
                       position="0 0 -0.75"></a-entity>
