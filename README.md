@@ -15,6 +15,7 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ![pic1](https://user-images.githubusercontent.com/32318210/36348669-adf03706-143a-11e8-979e-a61f43004f6c.PNG)
 - To create walls, a-box tag was used and also it was given specific attributes to sorround the floor, and it was also given a texture.
 ![pic2](https://user-images.githubusercontent.com/32318210/36348679-e8068788-143a-11e8-82ef-51b3e0d81d6a.PNG)
+- Also walking thorough the walls is not possible because of the kinematic body functionality included in the a-frame extras library.
 - The ceiling of the house was created by using the a-entity tag with a geometry of a box and given specific attributes and texture.
 ![pic3](https://user-images.githubusercontent.com/32318210/36348685-0ccf63b4-143b-11e8-9e2f-ecde9596a5e1.PNG)
 - An animated sky was added using the libraries sky.js and sunSetter.js, the animation of the sky was given using the a-animation tag and providing the initial and final sun position, duration of the animation, and repetition.
@@ -93,5 +94,6 @@ https://mbhakta95.github.io/Virtual-Reality/Project1/Project1.html
 ![pic10](https://user-images.githubusercontent.com/32318210/36348758-7e94382a-143c-11e8-9416-a3848edc5b0f.PNG)
 ![pic11](https://user-images.githubusercontent.com/32318210/36348759-7ea4d342-143c-11e8-8f5f-9f7fc8ba023e.PNG)
 
+## References
 
 
