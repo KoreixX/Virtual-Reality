@@ -7,17 +7,6 @@
     <script src="js/sunSetter.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.3.0/dist/aframe-extras.min.js"></script>
 
-    <!-- Global Variables for Opening door function -->
-    <script>
-        var dOpenPosition = new Object({x: 1.859, y: 2.037, z: 0.080});
-        var dClosedPosition = new Object({x: 3.388, y: 1.989, z: 1.861})
-        var dClosedRotation = new Object({x: 0, y: 270, z: 0});
-        var dOpenRotation = new Object({x: 0, y: 360, z: 0});
-
-        var isOpened = false;
-        var isClosed = true;
-    </script>
-
 </head>
 <body>
 
@@ -177,17 +166,20 @@
 
     <!-- Function for opening door -->
     <script>
+        var isOpened = false;
+        var isClosed = true;
         function openDoor() {
+
             var my_door = document.querySelector('#OnlyDoor');
             if (isClosed) {
-                my_door.setAttribute('rotation', dClosedRotation);
-                my_door.setAttribute('position', dClosedPosition);
+                my_door.setAttribute('rotation', "0 270 0");
+                my_door.setAttribute('position', "3.388 1.989 1.861");
                 isOpened = true;
                 isClosed = false;
             }
             else {
-                my_door.setAttribute('rotation', dOpenRotation);
-                my_door.setAttribute('position', dOpenPosition);
+                my_door.setAttribute('rotation', "0 360 0");
+                my_door.setAttribute('position', "1.859 2.037 0.080");
                 isOpened = false;
                 isClosed = true;
             }
